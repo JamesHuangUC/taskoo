@@ -1,0 +1,59 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 0px;
+}
+
+.bluebtn {
+  border: 1px solid #179EE0;
+}
+
+.inputstyle {
+  height: 50px;
+  width: 300px;
+  padding: 20px 20px;
+  margin: 5px 10px;
+  font-size: 15px;
+}
+
+.submitbtn {
+  padding: 14px 120px 14px 120px;
+  border: 1px solid white;
+  background-color: #179EE0;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.submitbtn2 {
+  padding: 14px 130px 14px 130px;
+  border: 1px solid white;
+  background-color: #179EE0;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #179EE0;
+}
+
+.forminput {
+  height: 50px;
+  padding: 20px 20px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.formtext {
+  height: 120px;
+  padding: 20px 20px;
+  font-size: 15px;
+  width: 100%;
+}
