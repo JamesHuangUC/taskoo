@@ -23,8 +23,6 @@
       <a href="taskerdashboard.php" class="brand-logo" style="margin-top: 20px;"><img src="../img/taskoo-logo.png" height=20px style="margin-left: 10px;"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="helperdashboard.php?page=find" class="linkcolor">Find Tasks</a></li>
-        <li><a href="helperdashboard.php?page=accepted" class="linkcolor">Accepted Tasks</a></li>
         <li><a class="dropdown-button linkcolor" href="#!" data-activates="dropdown1">Switch<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">

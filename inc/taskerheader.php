@@ -5,40 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   <script src="https://use.fontawesome.com/ed57d295ba.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-desktop.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="taskerdashboard.php"><img src="../img/taskoo-logo.png" height=20px></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="taskerdashboard.php?page=create">Create Task</a></li>
-          <li><a href="taskerdashboard.php?page=tasks">Your Tasks</a></li>
-          <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Switch &nbsp; <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li> <a href="taskerdashboard.php">Be a Tasker</a></li>
-              <li><a href="helperdashboard.php">Be a Helper</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="taskerdashboard.php">Be a Tasker</a></li>
+  <li><a href="helperdashboard.php">Be a Helper</a></li>
+  <li class="divider"></li>
+  <li><a href="profile.php">Profile</a></li>
+</ul>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper" style="background-color: white;">
+      <a href="taskerdashboard.php" class="brand-logo" style="margin-top: 20px;"><img src="../img/taskoo-logo.png" height=20px style="margin-left: 10px;"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="taskerdashboard.php?page=create" class="linkcolor">Create Task</a></li>
+        <li><a href="taskerdashboard.php?page=pending" class="linkcolor">Pending Tasks</a></li>
+        <li><a href="taskerdashboard.php?page=accepted" class="linkcolor">Accepted Tasks</a></li>
+        <li><a class="dropdown-button linkcolor" href="#!" data-activates="dropdown1">Switch<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
   </nav>
+  </div>

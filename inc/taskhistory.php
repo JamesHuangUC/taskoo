@@ -3,7 +3,7 @@
     <div class="col s1"></div>
     <div class="col s12">
       <br><br><br>
-      <center><h5>Pending Tasks</h5></center><br>
+      <center><h5>Task History</h5></center><br>
     </div>
   </div>
   <div class="row">
