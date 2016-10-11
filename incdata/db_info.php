@@ -1,15 +1,15 @@
 <!--
 SCHEMA:
 
-CREATE TABLE user (
+CREATE TABLE taskoo_user (
 name VARCHAR(20) NOT NULL,
 email VARCHAR(20) PRIMARY KEY,
 password VARCHAR(50) NOT NULL,
 contact VARCHAR(20) NOT NULL,
-account VARCHAR(20) NOT NULL
+isadmin BOOLEAN NOT NULL
 }
 
-CREATE TABLE task (
+CREATE TABLE taskoo_task (
 taskid SERIAL PRIMARY KEY,
 title VARCHAR(50) NOT NULL,
 description VARCHAR(200),
@@ -17,19 +17,12 @@ taskdate DATE NOT NULL,
 timerange VARCHAR(50) NOT NULL,
 location VARCHAR(50) NOT NULL,
 price INT NOT NULL,
-CATEGORY VARCHAR(20)
-}
-
-CREATE TABLE taskoo_post (
-taskid INT,
-helper VARCHAR(20),
-tasker VARCHAR(20),
-FOREIGN KEY (taskid) REFERENCES taskoo_task(taskid),
-FOREIGN KEY (helper) REFERENCES taskoo_user(email),
+CATEGORY VARCHAR(20),
+tasker VARCHAR(20) NOT NULL,
+helper VARCHAR(20) DEFAULT 'none',
 FOREIGN KEY (tasker) REFERENCES taskoo_user(email),
-postDate DATE NOT NULL,
-postTime VARCHAR(20) NOT NULL
-);
+FOREIGN KEY (helper) REFERENCES taskoo_user(email)
+}
 
 Sample Data:
 

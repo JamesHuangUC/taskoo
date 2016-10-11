@@ -7,7 +7,7 @@ if($_SESSION["email"]) {
       include 'inc/createtask.php';
     } else if ($_GET["page"] == "pending") {
       include 'inc/yourtasks.php';
-    } else if ($_GET["page"] == "accepted"){
+    } else if ($_GET["page"] == "history"){
       include 'inc/taskhistory.php';
     }
   } else {

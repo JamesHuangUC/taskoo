@@ -25,7 +25,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="taskerdashboard.php?page=create" class="linkcolor">Create Task</a></li>
         <li><a href="taskerdashboard.php?page=pending" class="linkcolor">Pending Tasks</a></li>
-        <li><a href="taskerdashboard.php?page=accepted" class="linkcolor">Accepted Tasks</a></li>
+        <li><a href="taskerdashboard.php?page=history" class="linkcolor">Task History</a></li>
         <li><a class="dropdown-button linkcolor" href="#!" data-activates="dropdown1">Switch<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">

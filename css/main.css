@@ -88,3 +88,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 a {
   color: #26a69a;
 }
+.inbtn {
+  width: auto;
+}

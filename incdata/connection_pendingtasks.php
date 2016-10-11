@@ -1,8 +1,9 @@
 
 <?php
+session_start();
 $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
     or die('Could not connect: ' . pg_last_error());
-$query = "SELECT title, location, taskdate, timerange, price, taskid FROM taskoo_task WHERE helper='none' ORDER BY postdate DESC, posttime DESC";
+$query = "SELECT title, location, taskdate, timerange, price, taskid FROM taskoo_task WHERE helper='none' AND tasker='".$_SESSION["email"]."' ORDER BY postdate DESC, posttime DESC";
 // echo "<b>SQL:   </b>".$query."<br><br>";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while ($row = pg_fetch_row($result)){
