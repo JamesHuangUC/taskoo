@@ -1,5 +1,7 @@
 <?php
 include("inc/profileheader.php");
+session_start();
+if ($_SESSION["email"]) {
 ?><br><br>
 <div class="container">
   <div class="row">
@@ -22,7 +24,7 @@ include("inc/profileheader.php");
           </tr>
           <tr>
             <td>Email Address</td>
-            <td><?php session_start(); echo $_SESSION["email"];?></td>
+            <td><?php echo $_SESSION["email"];?></td>
           </tr>
           <tr>
             <td>Contact Number</td>
@@ -35,5 +37,8 @@ include("inc/profileheader.php");
     </div>
   </div>
 </div>
-<?php include("incdata/connection.php"); ?>
-<?php include("inc/footer.php");?>
+<?php
+} else {
+  header("Location:index.php");
+}
+include("inc/footer.php");?>
