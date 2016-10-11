@@ -40,19 +40,7 @@
   <div class="col m8">
     <h5>Available Tasks</h5><br>
     <ul class="collection">
-    <li class="collection-item">
-      <div class="row" style="margin-bottom: 0px;">
-        <div class="col s9"><br>
-      <span class="title"><b>Clean my messy kitchen</b></span><br>
-      <p><i class="material-icons" style="vertical-align: bottom;">my_location</i> &nbsp; Clementi Road<br>
-          <i class="material-icons" style="vertical-align: bottom;">schedule</i> &nbsp; 10/04/16, Afternoon<br>
-          <i class="material-icons" style="vertical-align: bottom;">credit_card</i> &nbsp; $25/hr
-      </p>
-    </div>
-    <div class="col s3"><br>
-      <a href="http://google.com" target="_blank" class="secondary-content"><i class="material-icons">visibility</i></a></div>
-  </div>
-    </li>
+      <?php include("incdata/connection_findtask.php");?>
   </ul><br><br><br>
   </div>
 </div><br><br>

@@ -12,7 +12,7 @@ if(count($_POST)>0) {
   $query1 =
   "INSERT INTO taskoo_task(title,description,taskdate,timerange,location,price,category,tasker,helper,postDate,postTime)
   VALUES(" ."'".$_POST["title"] ."','".$_POST["description"]."', '2010-11-11','".$_POST["timerange"].
-  "','".$_POST["location"]."',". $_POST["price"].",'". $_POST["category"]."','".$_SESSION["email"]."', null,'".
+  "','".$_POST["location"]."',". $_POST["price"].",'". $_POST["category"]."','".$_SESSION["email"]."', 'none','".
   $formatDate."',". $formatTime .");";
   $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
 //  $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
