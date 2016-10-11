@@ -1,31 +1,3 @@
-
-<?php
-$dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
-    or die('Could not connect: ' . pg_last_error());
-$query = "SELECT email, name, contact FROM taskoo_user";
-echo "<b>SQL:   </b>".$query."<br><br>";
-$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-echo "<table border=\"1\" >
-<col width=\"75%\">
-<col width=\"25%\">
-<tr>
-<th>email</th>
-<th>name</th>
-<th>contact</th>
-</tr>";
-while ($row = pg_fetch_row($result)){
-  echo "<tr>";
-  echo "<td>" . $row[0] . "</td>";
-  echo "<td>" . $row[1] . "</td>";
-  echo "<td>" . $row[2] . "</td>";
-  echo "</tr>";
-}
-echo "</table>";
-
-pg_free_result($result);
-pg_close($dbconn);
-?>
-
 <!--
 SCHEMA:
 

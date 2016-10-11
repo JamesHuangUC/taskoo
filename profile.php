@@ -16,23 +16,11 @@ if ($_SESSION["email"]) {
             <th data-field="value">Details</th>
           </tr>
         </thead>
-
         <tbody>
-          <tr>
-            <td>Name</td>
-            <td>Audrey Tan</td>
-          </tr>
-          <tr>
-            <td>Email Address</td>
-            <td><?php echo $_SESSION["email"];?></td>
-          </tr>
-          <tr>
-            <td>Contact Number</td>
-            <td>91234567</td>
-          </tr>
+          <?php include("incdata/connection_profile.php"); ?>
         </tbody>
       </table><br><br>
-      <a href="logout.php" class="waves-effect waves-teal btn">Sign Out</a>
+      <a href="inc/logout.php" class="waves-effect waves-teal btn">Sign Out</a>
       <br><br><br>
     </div>
   </div>

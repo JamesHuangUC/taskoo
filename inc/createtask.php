@@ -1,10 +1,11 @@
-<form method="POST" action="taskersubmitted.php">
+<?php include("incdata/connection_createtask.php"); ?>
+<form method="POST" action="">
   <div class="row">
     <div class="col s1"></div>
     <div class="col s4"><br><br><br>
       <h5>Select Category</h5><br><br>
       <label>
-        <input type="radio" name="category" value="cleaning" />
+        <input type="radio" name="category" value="cleaning" required/>
         <img src="../img/btn-cleaning.jpg" height=160px>
       </label> &nbsp; &nbsp;
       <label>
@@ -32,40 +33,41 @@
       <h5>Describe Task</h5><br><br>
       <div class="row">
         <div class="input-field col s12">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Title</label>
+          <input id="title" type="text" name="title" class="validate" required>
+          <label for="title">Title</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <textarea id="textarea1" name="description" class="materialize-textarea"></textarea>
           <label for="textarea1">Task Description</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input type="date" class="datepicker">
-          <label for="email"></label>
+          <input type="date" name="taskdate" class="datepicker">
+          <label for="date"></label>
         </div>
         <div class="input-field col s6">
-          <input id="email" type="text" class="validate">
-          <label for="email">Time Range</label>
+          <select name="timerange" required>
+            <option disabled selected>Select Time Range</option>
+            <option name="timerange" value="Morning">Morning</option>
+            <option name="timerange" value="Afternoon">Afternoon</option>
+            <option name="timerange" value="Evening">Evening</option>
+            <option name="timerange" value="Any Time">Any Time</option>
+          </select>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Location</label>
+          <input id="location" type="text" name="location" class="validate" required>
+          <label for="location">Location</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="email" type="text" class="validate">
-          <label for="email">Price</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="email" type="text" class="validate">
-          <label for="email">Contact Number</label>
+          <input id="price" type="number" name="price" class="validate" required>
+          <label for="price">Price ($/hr)</label>
         </div>
       </div><br>
       <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">Submit Task
