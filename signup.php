@@ -3,49 +3,53 @@
   <title>Taskoo</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-  <link rel="stylesheet" href="../css/landing.css">
+  <script src="https://use.fontawesome.com/ed57d295ba.js"></script>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.php"><img src="../img/taskoo-logo.png" height=20px></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="login.php">Login</a></li>
-          <li><a href="signup.php">Sign Up</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-  <div class="container-fluid">
-    <div class="row"><br><br>
-      <div class="col-md-3"></div>
-      <div class="col-md-6" style="text-align: center;"><br><br>
-        <img src="../img/taskoo-logo.png" height=40px><br><br><br><br>
-        <input class="inputstyle" placeholder="name"><br>
-        <input class="inputstyle" placeholder="email"><br>
-        <input class="inputstyle" type="password" placeholder="password"><br><br>
-        <a class="btn btn-default submitbtn" href="taskerdashboard.php" role="button">Sign up</a>
-      </div>
+<body style="background-color: white;">
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper" style="background-color: white;">
+      <a href="taskerdashboard.php" class="brand-logo" style="margin-top: 20px;"><img src="../img/taskoo-logo.png" height=20px style="margin-left: 10px;"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="signup.php" class="linkcolor">Sign Up</a></li>
+        <li><a href="login.php" class="linkcolor">Login</a></li>
+      </ul>
     </div>
+  </nav>
   </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
-</html>
+  <div class="row"><br>
+    <div class="col m4"><br>
+    </div>
+    <div class="col m4"><br><br><br><center>
+      <img src="img/taskoo-logo.png" style="width: 40%;"></center><br><br>
+      <form action="taskerdashboard.php" method="POST">
+        <div class="input-field col s12">
+          <input id="name" name="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="contact" name="contact" type="text" class="validate">
+          <label for="contact">Contact Number</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="email" name="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="password" name="password" type="password" class="validate">
+          <label for="password">Password</label>
+          <br><br><br>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">SIGNUP
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+  </div><br><br><br>
+<?php include("inc/footer.php"); ?>

@@ -22,7 +22,7 @@ include("inc/profileheader.php");
           </tr>
           <tr>
             <td>Email Address</td>
-            <td>audreytan@gmail.com</td>
+            <td><?php session_start(); echo $_SESSION["email"];?></td>
           </tr>
           <tr>
             <td>Contact Number</td>
@@ -30,9 +30,10 @@ include("inc/profileheader.php");
           </tr>
         </tbody>
       </table><br><br>
-      <a class="waves-effect waves-teal btn">Sign Out</a>
+      <a href="logout.php" class="waves-effect waves-teal btn">Sign Out</a>
       <br><br><br>
     </div>
   </div>
 </div>
+<?php include("incdata/connection.php"); ?>
 <?php include("inc/footer.php");?>

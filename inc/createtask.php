@@ -68,7 +68,7 @@
           <label for="email">Contact Number</label>
         </div>
       </div><br>
-      <button class="btn waves-effect waves-light" type="submit" name="action" style="submitbutton">Submit Task
+      <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">Submit Task
         <i class="material-icons right">send</i>
       </button>
 
