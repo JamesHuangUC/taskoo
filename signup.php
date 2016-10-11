@@ -1,3 +1,21 @@
+<?php
+session_start();
+$message="";
+if(count($_POST)>0) {
+  $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
+  or die('Could not connect: ' . pg_last_error());
+  $query = "INSERT INTO taskoo_user VALUES ('". $_POST["email"]. "','".$_POST["password"].
+  "','".$_POST["name"]."','".$_POST["contact"]."','FALSE')";
+  echo "<b>SQL:   </b>".$query."<br><br>";
+  $result = pg_query($query) or die('Query failed: ' . pg_last_error());
+  $row = pg_fetch_row($result);
+  $_SESSION["email"] = $_POST["email"];
+}
+if(isset($_SESSION["email"])) {
+  header("Location:taskerdashboard.php");
+}
+?>
+
 <html>
 <head>
   <title>Taskoo</title>
@@ -28,7 +46,7 @@
     </div>
     <div class="col m4"><br><br><br><center>
       <img src="img/taskoo-logo.png" style="width: 40%;"></center><br><br>
-      <form action="taskerdashboard.php" method="POST">
+      <form action="" method="POST">
         <div class="input-field col s12">
           <input id="name" name="name" type="text" class="validate">
           <label for="name">Name</label>
