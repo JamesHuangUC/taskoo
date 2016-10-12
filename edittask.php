@@ -84,10 +84,8 @@ pg_close($dbconn);
         </div>
         <div class="col s6"><input type="hidden" name="taskid" value='<?php echo $_GET["taskid"];?>'></div>
       </div><br>
-      <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">Update Task
-        <i class="material-icons right">send</i>
-      </button>
-
+      <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">Update</button>
+      <a href="taskerdashboard.php?page=pending" class="waves-effect waves-teal btn inbtn">Back</a> &nbsp;
     </div>
     <div class="col s1"></div>
   </div><br><br>
