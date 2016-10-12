@@ -13,7 +13,7 @@ while ($row = pg_fetch_row($result)){
   $row[2] .', ' . $row[3]. '<br><i class="material-icons" style="vertical-align: bottom;">credit_card</i> &nbsp; $'.
   $row[4] . '/hr</p></div>
   <div class="col s3"><br>
-    <a href="../taskdetails.php?taskid='.$row[5].'" target="_blank" class="secondary-content"><i class="material-icons">visibility</i></a></div>
+    <a href="../taskdetails.php?taskid='.$row[5].'" class="secondary-content"><i class="material-icons">visibility</i></a></div>
 </div>
   </li>';
 }

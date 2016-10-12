@@ -1,8 +1,8 @@
 <?php include("inc/helperheader.php");
 $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
     or die('Could not connect: ' . pg_last_error());
-$query = "SELECT title, location, taskdate, timerange, price, description, category, t.name, postdate FROM taskoo_task, taskoo_user t
-WHERE tasker=t.email AND taskid=". $_GET["taskid"].";";
+$query = "SELECT title, location, taskdate, timerange, price, description, category, t.name, t.contact, t.email, postdate FROM taskoo_task, taskoo_user t
+WHERE helper=t.email AND taskid=". $_GET["taskid"].";";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 $row = pg_fetch_row($result);
 ?>
@@ -47,12 +47,20 @@ $row = pg_fetch_row($result);
         echo "<td>".$row[6]."</td>";
         echo "</tr>";
         echo "<tr>";
-        echo "<td>Tasker Name :</td>";
+        echo "<td>Helper Name :</td>";
         echo "<td>".$row[7]."</td>";
         echo "</tr>";
         echo "<tr>";
-        echo "<td>Post Date :</td>";
+        echo "<td>Helper Contact :</td>";
         echo "<td>".$row[8]."</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>Helper Email :</td>";
+        echo "<td>".$row[9]."</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td>Post Date :</td>";
+        echo "<td>".$row[10]."</td>";
         echo "</tr>";
         ?>
       </tbody>
@@ -63,10 +71,9 @@ $row = pg_fetch_row($result);
 <div class="row"><br><br>
   <div class="col m3"></div>
   <div class="col m2">
-    <a href="helperdashboard.php" class="waves-effect waves-teal btn inbtn">Back</a>
+    <a href="taskerdashboard.php?page=history" class="waves-effect waves-teal btn inbtn">Back</a><br><br><br>
   </div>
   <div class="col m4">
-    <a href='incdata/accepttask.php?<?php echo "taskid=".$_GET["taskid"];?>' class="waves-effect waves-teal btn inbtn">Accept</a>
     <br><br><br>
   </div>
   <div class="col m3"></div>

@@ -60,14 +60,12 @@ $row = pg_fetch_row($result);
   </div>
   <div class="col m3"></div>
 </div>
-<div class="row"><br><br>
+<div class="row"><br>
   <div class="col m3"></div>
-  <div class="col m2">
-    <a href="helperdashboard.php" class="waves-effect waves-teal btn inbtn">Back</a>
-  </div>
-  <div class="col m4">
-    <a href='incdata/accepttask.php?<?php echo "taskid=".$_GET["taskid"];?>' class="waves-effect waves-teal btn inbtn">Accept</a>
-    <br><br><br>
+  <div class="col m6">
+    <a href="taskerdashboard.php?page=pending" class="waves-effect waves-teal btn inbtn">Back</a> &nbsp;
+    <a href='incdata/deletetask.php?<?php echo "taskid=".$_GET["taskid"];?>' class="waves-effect waves-teal btn inbtn">Delete</a> &nbsp;
+    <a href='edittask.php?<?php echo "taskid=".$_GET["taskid"];?>' class="waves-effect waves-teal btn inbtn">Edit</a><br><br><br>
   </div>
   <div class="col m3"></div>
 </div>
