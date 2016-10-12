@@ -4,6 +4,7 @@
       <div class="col l6 s12">
         <h5 class="white-text">Taskoo</h5>
         <p class="grey-text text-lighten-4">Taskoo is a free platform that connects taskers with available helpers.
+          A tasker is someone who needs help and a helper is someone who gives the help.
           Simply submit a task or find a task to get started today!</p>
         </p>
       </div>
