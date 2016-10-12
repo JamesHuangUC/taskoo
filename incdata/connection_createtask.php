@@ -1,6 +1,14 @@
 <?php
 session_start();
 $message="";
+
+function getDateSQL() {
+  $datestring = $_POST["taskdate"];
+  // $datearray = explode("/",$datestring);
+  // echo $datearray[2];
+  return $datestring;
+}
+
 if(count($_POST)>0) {
   $today = getdate();
   $formatDate = $today["year"] . "-". $today["mon"] . "-" . $today["mday"];
@@ -11,7 +19,7 @@ if(count($_POST)>0) {
   or die('Could not connect: ' . pg_last_error());
   $query1 =
   "INSERT INTO taskoo_task(title,description,taskdate,timerange,location,price,category,tasker,helper,postDate,postTime)
-  VALUES(" ."'".$_POST["title"] ."','".$_POST["description"]."', '2010-11-11','".$_POST["timerange"].
+  VALUES(" ."'".$_POST["title"] ."','".$_POST["description"]."', '".$_POST["taskdate"]."','".$_POST["timerange"].
   "','".$_POST["location"]."',". $_POST["price"].",'". $_POST["category"]."','".$_SESSION["email"]."', 'none','".
   $formatDate."',". $formatTime .");";
   $result1 = pg_query($query1) or die('Query failed: ' . pg_last_error());
