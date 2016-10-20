@@ -4,8 +4,8 @@ $message="";
 if(count($_POST)>0) {
   $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
   or die('Could not connect: ' . pg_last_error());
-  $query = "INSERT INTO taskoo_user VALUES ('". $_POST["email"]. "','".$_POST["password"].
-  "','".$_POST["name"]."','".$_POST["contact"]."','FALSE')";
+  $query = "INSERT INTO taskoo_user VALUES ('". $_POST["name"]. "','".$_POST["email"].
+  "','".$_POST["password"]."','".$_POST["contact"]."','FALSE')";
   echo "<b>SQL:   </b>".$query."<br><br>";
   $result = pg_query($query) or die('Query failed: ' . pg_last_error());
   $row = pg_fetch_row($result);
