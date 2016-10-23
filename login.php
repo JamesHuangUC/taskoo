@@ -18,8 +18,12 @@ if(count($_POST)>0) {
   }
 }
 if(isset($_SESSION["email"])) {
-  header("Location:taskerdashboard.php");
+  if($_SESSION["isadmin"]) {  header("Location:admindashboard.php");}
+  else{
+    header("Location:taskerdashboard.php");
+  }
 }
+
 ?>
 <html>
 <head>
