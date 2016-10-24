@@ -14,4 +14,3 @@ Taskoo is a platform that connects taskers with available helpers.
 - search function
 - admin panel dashboard with CRUD functionality
 - form control (error messages for user)
-- conform datepickerjs date format to SQL's

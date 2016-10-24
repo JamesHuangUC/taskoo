@@ -1,4 +1,4 @@
-<?php include("inc/helperheader.php");
+<?php include("inc/adminheader.php");
 $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
     or die('Could not connect: ' . pg_last_error());
 $query = "SELECT title, location, taskdate, timerange, price, description, category, t.name, postdate FROM taskoo_task, taskoo_user t
@@ -63,7 +63,7 @@ $row = pg_fetch_row($result);
 <div class="row"><br>
   <div class="col m3"></div>
   <div class="col m6">
-    <a href="taskerdashboard.php?page=pending" class="waves-effect waves-teal btn inbtn">Back</a> &nbsp;
+    <a href="admindashboard.php?page=pending" class="waves-effect waves-teal btn inbtn">Back</a> &nbsp;
     <a href='incdata/deletetask.php?<?php echo "taskid=".$_GET["taskid"];?>' class="waves-effect waves-teal btn inbtn">Delete</a> &nbsp;
     <a href='edittask.php?<?php echo "taskid=".$_GET["taskid"];?>' class="waves-effect waves-teal btn inbtn">Edit</a><br><br><br>
   </div>

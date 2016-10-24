@@ -12,9 +12,6 @@
 </head>
 <body>
   <ul id="dropdown1" class="dropdown-content">
-  <li><a href="taskerdashboard.php">Be a Tasker</a></li>
-  <li><a href="helperdashboard.php">Be a Helper</a></li>
-  <li class="divider"></li>
   <li><a href="profile.php">Profile</a></li>
 </ul>
 <div class="navbar-fixed">
@@ -23,9 +20,9 @@
       <a href="taskerdashboard.php" class="brand-logo" style="margin-top: 20px;"><img src="../img/taskoo-logo.png" height=20px style="margin-left: 10px;"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="helperdashboard.php?page=find" class="linkcolor">Find Tasks</a></li>
-        <li><a href="helperdashboard.php?page=accepted" class="linkcolor">Accepted Tasks</a></li>
-        <li><a class="dropdown-button linkcolor" href="#!" data-activates="dropdown1">Switch<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="admindashboard.php?page=users" class="linkcolor">Users</a></li>
+        <li><a href="admindashboard.php?page=tasks" class="linkcolor">Tasks</a></li>
+        <li><a class="dropdown-button linkcolor" href="#!" data-activates="dropdown1">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
