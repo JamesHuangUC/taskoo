@@ -4,7 +4,7 @@ $message="";
 if(count($_POST)>0) {
   $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
   or die('Could not connect: ' . pg_last_error());
-  $query = "SELECT email FROM taskoo_user WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'";
+  $query = "SELECT email, isadmin FROM taskoo_user WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'";
   echo "<b>SQL:   </b>".$query."<br><br>";
   $result = pg_query($query) or die('Query failed: ' . pg_last_error());
   echo "pass";
@@ -18,8 +18,9 @@ if(count($_POST)>0) {
   }
 }
 if(isset($_SESSION["email"])) {
-  if($_SESSION["isadmin"]) {  header("Location:admindashboard.php");}
-  else{
+	$_SESSION["isadmin"] = $row[1];
+  if($row[1] == "t") { header("Location:admindashboard.php");}
+  elseif ($row[1] == "f"){
     header("Location:taskerdashboard.php");
   }
 }
