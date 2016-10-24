@@ -1,5 +1,5 @@
 # taskoo
-Taskoo is a platform that connects taskers with available helpers. This web application is built with vanilla HTML, CSS, Javascript, PHP & utilizes a PostgreSQL database.
+Taskoo is a platform that connects taskers with available helpers.
 
 ## Done
 - main structure / user flow of web app
@@ -7,10 +7,11 @@ Taskoo is a platform that connects taskers with available helpers. This web appl
 - integration with SQL database 
 - simple user authentication
 - task details view
-- seperate master-detail view for different tabs
-- allow tasker to edit or delete pending tasks
-- search function (search by title and categories, rank by highest price, earliest date)
 
 ## To Be Done
+- separate master-detail view that allows helper and tasker to see each other's contact details when task is accepted
+- allow tasker to edit or delete pending tasks
+- search function
 - admin panel dashboard with CRUD functionality
 - form control (error messages for user)
+- conform datepickerjs date format to SQL's
