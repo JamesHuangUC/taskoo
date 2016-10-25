@@ -11,8 +11,6 @@ The below are screenshots of the database setup required in order to try the app
 To access the admin panel, change the isadmin column of one of the task_users to true.<br>
 Log in and go to '/admindashboard.php'.<br>
 
-Note that as the module demo is done on a desktop browser, mobile device browsers are not supported.<br><br>
-
 ## Features
 
 ### CRUD functions:<br><br>
