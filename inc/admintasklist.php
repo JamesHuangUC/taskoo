@@ -44,13 +44,13 @@
       </form>
     </div>
     <div class="col m8">
-      <h5>Available Tasks</h5><br>
+      <h5>All Tasks</h5><br>
       <ul class="collection">
         <?php
         if (isset($_GET["cat_cleaning"]) || isset($_GET["searchtitle"])) {
-          include("incdata/connection_searchtask.php");
+          include("incdata/connection_searchtask_admin.php");
         } else {
-          include("incdata/connection_findtask.php");
+          include("incdata/connection_findtask_admin.php");
         }?>
       </ul><br><br><br>
     </div>
