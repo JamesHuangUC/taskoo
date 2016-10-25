@@ -4,7 +4,7 @@ $message="";
 if(count($_POST)>0) {
   $dbconn = pg_connect("host=localhost port=5432 dbname=taskoo user=postgres password=tessa")
   or die('Could not connect: ' . pg_last_error());
-  $query = "SELECT email FROM taskoo_user WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'";
+  $query = "SELECT email, isAdmin FROM taskoo_user WHERE email='".$_POST['email']."' AND password='".$_POST['password']."'";
   echo "<b>SQL:   </b>".$query."<br><br>";
   $result = pg_query($query) or die('Query failed: ' . pg_last_error());
   echo "pass";
@@ -13,6 +13,11 @@ if(count($_POST)>0) {
     echo $row[0];
     echo "<script>alert('Logged in!')</script>";
     $_SESSION["email"] = $row[0];
+    if ($row[1] == "true") {
+        $_SESSION["admin"] = "isadmin";
+    } else {
+      $_SESSION["admin"] = "notadmin";
+    }
   } else {
     $message = "Invalid Username or Password!";
   }
