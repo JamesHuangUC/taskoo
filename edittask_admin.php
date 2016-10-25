@@ -90,7 +90,7 @@ pg_close($dbconn);
         </div>
       <br>
       <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right;">Update</button>
-      <a href="taskerdashboard.php?page=pending" class="waves-effect waves-teal btn inbtn">Back</a> &nbsp;
+      <a href="admindashboard.php" class="waves-effect waves-teal btn inbtn">Back</a> &nbsp;
     </div>
     <div class="col s1"></div>
   </div><br><br>
