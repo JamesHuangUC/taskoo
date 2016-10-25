@@ -1,7 +1,7 @@
 # Taskoo
 Taskoo is a platform that connects taskers with available helpers.<br>
 Below is an overview of the user flow:<br><br>
-![alt tag](taskoo-userflow.jpg "User Flow"| width=200)<br>
+![alt tag](taskoo-userflow.jpg "User Flow")<br>
 
 ## Set Up
 The below are screenshots of the database setup required in order to try the application:<br><br>
